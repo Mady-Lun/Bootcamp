@@ -1,0 +1,368 @@
+/* Overall header styling */
+.header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center vertically */
+  padding: 10px 20px; /* Add padding for spacing */
+  background: linear-gradient(
+    to right,
+    rgba(217, 217, 217, 0) 25%,
+    rgba(0, 217, 241, 0.5)
+  ); /* Gradient background */
+}
+
+/* Logo and title group styling */
+.list-group {
+  display: inline-block; /* Align logo and title horizontally */
+  align-items: center; /* Center vertically */
+  gap: 10px; /* Add spacing between logo and title */
+}
+
+.logo {
+  width: 60px; /* Adjust logo size */
+  height: 60px;
+  top: 8px;
+  left: 25px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.title .in {
+  color: #00d9f1;
+}
+
+.title .tech {
+  color: #de9000;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  align-items: center; /* Center links vertically */
+  gap: 55px; /* Add spacing between links */
+  font-family: Outfit, sans-serif; /* Use custom font */
+  padding-right: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000; /* Link color */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff9800; /* Hover effect */
+}
+
+/* Request a demo button styling */
+.request-demo {
+  background-color: rgba(222, 144, 0, 1); /* Button color */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.request-demo:hover {
+  background-color: #e68a00; /* Darker hover effect */
+}
+
+/* Main content section */
+.body {
+  background: linear-gradient(
+    to right,
+    rgba(217, 217, 217, 0) 25%,
+    rgba(0, 217, 241, 0.5)
+  ); /* Same gradient as the header */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 60px;
+  padding-left: 25px;
+}
+.main-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.main-body .sg {
+  font-size: 48px;
+  color: #000;
+  margin-top: 40px;
+}
+.main-body .sg .SW {
+  color: rgba(0, 217, 241, 1);
+}
+.main-body sg .SS {
+  color: rgba(222, 144, 0, 1);
+}
+
+.main-body .sg h1 {
+  margin: 0;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.main-body .sg h1:nth-child(2) {
+  color: #ff9800;
+}
+
+.main-body .sg p {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 300px;
+  margin-left: 13px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+/* Image section */
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px;
+  margin-left: auto;
+  position: relative;
+}
+
+.image img {
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.phone1 {
+  max-width: 190px;
+  position: absolute; /* Allow overlapping */
+  bottom: 25px;
+  right: 190px; /* Adjust to move horizontally */
+  z-index: 2; /* Ensure phone1 is on top */
+}
+.phone2 {
+  top: 0px; /* Adjust to move vertically */
+  max-width: 200px; /* Resize the image */
+  height: auto; /* Maintain aspect ratio */
+  transform: rotate(17deg); /* Rotate phone2 by 30 degrees */
+  z-index: 1; /* Ensure phone2 is below phone1 */
+  transition: transform 0.3s ease;
+}
+@media (max-width: 400px) {
+  .main-body {
+    flex-direction: column;
+    align-items: center;
+
+    .image {
+      align-items: center;
+    }
+  }
+}
+
+.mobile-attendance {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.rectangle {
+  display: flex;
+  position: absolute;
+  top: -170px;
+  left: 50px;
+  width: 0;
+  height: 0;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 166, 0, 0.62) 60%
+  );
+  width: 550px;
+  height: 1000px;
+  z-index: -1;
+}
+
+.mobile-attendance img {
+  max-width: 220px;
+  margin-left: 60px;
+  margin-top: 70px;
+}
+.attendance-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.attendance-card1,
+.attendance-card2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(246, 246, 246);
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  margin-left: 70px; /* Position the cards to the left of the phone */
+}
+
+.icon-section {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-section img {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+  margin-bottom: 68px;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+h3 {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 16px;
+  color: #028484;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.status {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.attendance-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.text-container {
+  text-align: center;
+}
+
+.title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title-section::after {
+  content: " System"; /* Adds "System" after the text */
+  color: #de9000;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.description {
+  font-size: 20px;
+  font-weight: lighter;
+  margin-top: 15px;
+  padding: 0 20px;
+  max-width: 700px; /* Set a max width to limit the length */
+  line-height: 1.6; /* Improve readability by adjusting line height */
+  text-align: left; /* Center align the text */
+  margin-left: auto;
+  margin-right: auto; /* Center the container within its parent */
+}
+
+.smart-laundry {
+    background: linear-gradient(to right,rgb(255, 255, 255) 25%,rgba(0, 217, 241, 0.5));
+    margin-top: 70px;
+    margin-left: 50px;
+    position: relative;
+    display: flex;
+    align-items: center; /* Ensures the items are vertically aligned in the center */
+  }
+  
+  .text-container {
+    text-align: center;
+    flex: 1; /* Allow the text container to take up remaining space */
+  }
+  
+  .title-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .title-section::after {
+    content: " System"; /* Adds "System" after the text */
+    color: #de9000;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .description {
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 15px;
+    padding: 0 20px;
+    max-width: 700px; 
+    line-height: 1.6; 
+    text-align:left; 
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  
+  .smart-laundry-image {
+    flex: 1; /* Ensures the image container takes up the remaining space */
+    text-align: center; /* Center-align the image */
+  }
+  
+  .smart-laundry-image img {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .phone4 {
+    position: relative;
+    bottom: 25px;
+    margin-top: 50px;
+    
+   
+  }
+  
